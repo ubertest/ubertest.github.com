@@ -3,7 +3,7 @@
 
   <head>
 		<base href="" />
-		<title>Home &raquo; My Super Site</title>
+		<title>Feed me &raquo; My Super Site</title>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
 		<link rel="shortcut icon" href="http://betfair-portal.local/favicon.ico" />
@@ -50,13 +50,13 @@
 		<div id="Navigation">
 			<ul>
  	
-  		<li><a href="index.html" title="Go to the Home page" class="current"><span>Home</span></a></li>
+  		<li><a href="../home/index.html" title="Go to the Home page" class="link"><span>Home</span></a></li>
    	
   		<li><a href="../some-page/index.html" title="Go to the Some page page" class="link"><span>Some page</span></a></li>
    	
   		<li><a href="../new-simplepage-2/index.html" title="Go to the New SimplePage page" class="link"><span>New SimplePage</span></a></li>
    	
-  		<li><a href="../feed-me/index.html" title="Go to the Feed me page" class="link"><span>Feed me</span></a></li>
+  		<li><a href="index.html" title="Go to the Feed me page" class="current"><span>Feed me</span></a></li>
    	
  </ul>
 	  	</div>
@@ -70,24 +70,19 @@
 
 				
 
-					<h2>Home</h2>
+					<h2>Feed me</h2>
 
-					<p>Default home page lovely page</p>
-<ul><li>Nothing</li>
-<li>To</li>
-<li>See</li>
-<li>Here</li>
-</ul><div><span style="color: #666666;"><span style="font-size: 11px;">Superdupercalafragilisitic</span></span></div>
+					<p>Nom nom nom...</p>
 
 					<ul>
 					  
-					  <li><a href="index.html">Default</a></li>
+					  <li><a href="../home/index.html">Default</a></li>
 					  
 					</ul>
 
 					<ul>
 					  
-					  <li><a href="../../../index.html">Default</a></li>
+					  <li><a href="../../default/feed-me/index.html">Default</a></li>
 					  
 					  <li><a href="index.html">Afrikaans</a></li>
 					  
@@ -96,6 +91,27 @@
 					
 					
 				
+
+				
+				
+				<div class="dynamicFeed"
+				     data-url="http://www.dzone.com/links/feed/frontpage/rss.xml"
+				     data-limit="5"
+				     data-title="Latest Dzone"
+				     data-linkHref="http://www.dzone.com/links/index.html"
+					 
+				></div>
+				
+				<div class="dynamicFeed"
+				     data-url="http://forum.bdp.betfair.com/external.php?type=RSS2"
+				     data-limit="10"
+				     data-title="Latest forum posts"
+				     
+					 data-ssl="true"
+				></div>
+				
+				
+
 			</div>
 
 		</div>

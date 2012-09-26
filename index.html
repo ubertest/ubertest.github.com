@@ -33,7 +33,7 @@
 <link rel="stylesheet" type="text/css" href="themes/blackcandy/css/typography.css@m=1347447119.css" />
 <link rel="stylesheet" type="text/css" href="themes/blackcandy/css/form.css@m=1347447119.css" />
 </head>
-<body>
+<body class="homePage">
 <div id="BgContainer">
 	<div id="Container">
 		<div id="Header">
@@ -66,28 +66,33 @@
 			<div class="typography">
 				
 					<div id="Sidebar" class="typography">
+
+	
 	<div class="sidebarBox">
  		<h3>
 			
 				Betfair BDP Home
 			
   		</h3>
-  		
+
   		<ul id="Menu2">
 		  	
   	    		
 		  			<li><a href="ukgb/uk/home/horse-races/index.html" title="Go to the Horse Races page" class="link levela"><span><em>Horse-Race</em></span></a>
-					  
-	  		
-	  			 
-			</li> 
+				
+
+	  			
+			</li>
   			
   		</ul>
 		<div class="clear"></div>
 	</div>
 	<div class="sidebarBottom"></div>
+	
+
+	
 </div>
-  
+
 					<div id="Content">
 				
 
@@ -98,21 +103,29 @@
 					<h1 style="text-align: center;"><strong>Welcome to Betfair BDP!</strong></h1>
 <p><strong><img class="center" src="assets/PrimaryFolder/betfair.jpg" width="400" height="300" alt="" title=""/><br/></strong></p>
 
-					<ul>
-					  
-					  <li><a href="index.html">Default Jurisdiction</a></li>
-					  
-					  <li><a href="usJ/uk/home/index.html">US juristiction</a></li>
-					  
-					</ul>
+					<ul id="jurisdictions">
+	
+	<li class="jurisdiction default current">
+		<a href="index.html" data-jurisdiction="ukgb">Default Jurisdiction</a>
+	</li>
+	
+	<li class="jurisdiction  ">
+		<a href="usJ/uk/home/index.html" data-jurisdiction="usJ">US juristiction</a>
+	</li>
+	
+</ul>
 
-					<ul>
-					  
-					  <li><a href="index.html">Default Locale</a></li>
-					  
-					  <li><a href="ukgb/us/home/index.html">US Locale</a></li>
-					  
-					</ul>
+					<ul id="locales">
+	
+	<li class="locale default current">
+		<a href="index.html" data-locale="en_GB">Default Locale</a>
+	</li>
+	
+	<li class="locale  ">
+		<a href="ukgb/us/home/index.html" data-locale="en_US">US Locale</a>
+	</li>
+	
+</ul>
 
 					
 					
@@ -125,8 +138,6 @@
 
 
 
-
-
 	   <div class="clear"><!-- --></div>
 	</div>
 	<div id="Footer">
@@ -136,7 +147,19 @@
 <p>Copyright &copy; 2007-2012 | Powered by <a href="http://www.silverstripe.com" title="This site runs on the SilverStripe CMS">SilverStripe Open Source CMS</a></p>
 
 	</div>
+
+	
 </div>
 
+<script type="text/javascript" src="project/js/json2.js"></script>
+<script type="text/javascript" src="project/js/underscore-min.js"></script>
+<script type="text/javascript" src="project/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="project/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="project/js/jquery.cookiemap.js"></script>
+<script type="text/javascript" src="project/js/jquery.zrssfeed.js"></script>
+<script type="text/javascript" src="project/js/project.localeRedirect.js"></script>
+<script type="text/javascript" src="project/js/project.jurisdictionRedirect.js"></script>
+<script type="text/javascript" src="project/js/project.dynamicFeed.js"></script>
+<script type="text/javascript"></script>
 </body>
 </html>

@@ -8,30 +8,31 @@
  */
 jQuery(function ($) {
 
-	var $jurisdictions,
-	    current,
-	    cookiemap;
+	var $jurisdictions = $("#jurisdictions .jurisdiction"),
+	    current = $jurisdictions.filter(".current").find("a").attr("data-jurisdiction"),
+	    cookiemap = $.cookiemap("inviqa_shared");
 
-	if (!$('body').hasClass('homePage')) {
-		return;
-	}
+    // Only check if redirect is necessary on home page
+    (function () {
 
-	$jurisdictions = $("#jurisdictions .jurisdiction");
-	current = $jurisdictions.filter(".current").find("a").attr("data-jurisdiction");
-	cookiemap = $.cookiemap("inviqa_shared");
+        if (!$('body').hasClass('homePage')) {
+            return;
+        }
 
-	if (!cookiemap.get("jurisdiction")) {
-		cookiemap.set("jurisdiction", current);
-	}
+        if (!cookiemap.get("jurisdiction")) {
+            cookiemap.set("jurisdiction", current);
+        }
 
-	if (cookiemap.get("jurisdiction") !== current) {
+        if (cookiemap.get("jurisdiction") !== current) {
 
-		$jurisdictions.find("a[data-jurisdiction=" + cookiemap.get("jurisdiction") + "]").each(function () {
-			window.isRedirecting = true;
-			window.location = this.href;
-		});
+            $jurisdictions.find("a[data-jurisdiction=" + cookiemap.get("jurisdiction") + "]").each(function () {
+                window.isRedirecting = true;
+                window.location = this.href;
+            });
 
-	}
+        }
+
+    }());
 
 	$jurisdictions.find("a").click(function () {
 

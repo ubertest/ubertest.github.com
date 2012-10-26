@@ -1,0 +1,81 @@
+/*
+ * When overriding files elements and classes that are available in bootstrap
+ * it should be done here. By doing so we can view the bootstrap documentation
+ * with this stylesheet added and our changes reflected in the demo pages.
+ */
+
+body {
+    font-family: Tahoma, Arial, Helvetica, san-serif;
+    font-size: 12px;
+    color: #202020;
+}
+
+a, a:hover {
+    color: #2789CE;
+}
+
+.well {
+    background-color: #EBEFEF;
+}
+
+/* Inset on primary and secondary headings */
+h1, h2, h2 a, h2 a:hover {
+    color: rgba(90, 120, 145, 0.5);
+    text-shadow:
+        1px 1px 0 rgba(255, 255, 255, 0.6),
+        0 0 0px rgba(0, 0, 0, 0.4);
+}
+
+.lt-ie9 h1, .lt-ie9 h2, .lt-ie9 h2 a, .lt-ie9 h2 a:hover {
+    color: #99ACB7;
+}
+
+h1 {
+    margin: 0 0 20px;
+}
+
+h2 {
+    margin: 30px 0 15px;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+/*
+ * Overriding bootstrap button styling.
+ */
+
+.btn {
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 2px;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    padding: 0 10px;
+    line-height: 31px;
+}
+
+.btn i {
+    padding-left: 12px;
+    font-style: normal;
+}
+
+.btn-info,
+.btn-info:hover,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+    background-color: #2789CE;
+}
+
+.btn-info {
+    background-image: linear-gradient(180deg, #4EB6FD 0%, #1D79B8 95%);
+}
+
+.btn-link {
+    text-shadow: none;
+}
+
+.btn:hover {
+    background-position: 0 0;
+    transition: none;
+    background-image: none;
+}

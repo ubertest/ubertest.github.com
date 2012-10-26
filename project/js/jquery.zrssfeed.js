@@ -1,4 +1,6 @@
 /**
+ * Includes minor modifications to html output. Original readme:
+ *
  * Plugin: jquery.zRSSFeed
  *
  * Version: 1.1.8
@@ -44,6 +46,7 @@
 			linktarget: '_self',
 			linkredirect: '',
 			linkcontent: false,
+            morelink: true,
 			sort: '',
 			sortasc: true,
 			historical: false
@@ -129,7 +132,7 @@
 
 		// Add body
 		html += '<div class="rssBody">' +
-			'<ul>';
+			'<ul class="feed">';
 
 
 		// Add feeds
@@ -163,9 +166,9 @@
 
 			// Add feed row
 			if (options.linkredirect) feedLink = encodeURIComponent(feedLink);
-			rowArray[rowIndex]['html'] = '<'+ options.titletag +'><a href="'+ options.linkredirect + feedLink +'" title="View this feed at '+ feeds.title +'">'+ entry.title +'</a></'+ options.titletag +'>'
+			rowArray[rowIndex]['html'] = '<'+ options.titletag +' class="feed-item-title"><a href="'+ options.linkredirect + feedLink +'" title="View this feed at '+ feeds.title +'">'+ entry.title +'</a></'+ options.titletag +'>'
 
-			if (options.date && pubDate) rowArray[rowIndex]['html'] += '<div>'+ pubDate +'</div>'
+			if (options.date && pubDate) rowArray[rowIndex]['html'] += '<div class="feed-item-publish-date">'+ pubDate +'</div>'
 			if (options.content) {
 
 				// Use feed snippet if available and optioned
@@ -177,9 +180,11 @@
 
 				if (options.linkcontent) {
 					content = '<a href="'+ options.linkredirect + feedLink +'" title="View this feed at '+ feeds.title +'">'+ content +'</a>'
+				} else if (options.morelink) {
+					content = content + ' <a href="'+ options.linkredirect + feedLink +'" title="View this feed at '+ feeds.title +'">More</a>'
 				}
 
-				rowArray[rowIndex]['html'] += '<p>'+ content +'</p>'
+				rowArray[rowIndex]['html'] += '<p class="feed-item-description">'+ content +'</p>'
 			}
 
 			// Add any media
@@ -193,7 +198,7 @@
 						var xmlUrl = xmlMedia[m].getAttribute("url");
 						var xmlType = xmlMedia[m].getAttribute("type");
 						var xmlSize = xmlMedia[m].getAttribute("length");
-						rowArray[rowIndex]['html'] += '<li><a href="'+ xmlUrl +'" title="Download this media">'+ xmlUrl.split('/').pop() +'</a> ('+ xmlType +', '+ formatFilesize(xmlSize) +')</li>';
+						rowArray[rowIndex]['html'] += '<li class="feed-item"><a href="'+ xmlUrl +'" title="Download this media">'+ xmlUrl.split('/').pop() +'</a> ('+ xmlType +', '+ formatFilesize(xmlSize) +')</li>';
 					}
 					rowArray[rowIndex]['html'] += '</ul></div>'
 				}

@@ -13,8 +13,6 @@ jQuery(function ($) {
 		var $this = $(this),
 		    url = $this.attr('data-url') || null,
 		    limit = +$this.attr('data-limit') || 5,
-			title = $this.attr('data-title') || '',
-			linkHref = $this.attr('data-linkHref') || '',
 			ssl = false;
 
 		if (!url) {
@@ -28,17 +26,12 @@ jQuery(function ($) {
 		$this.rssfeed(
 			url,
 			{
+                header: false,
 				limit: limit,
 				linktarget: '_blank',
-				ssl: ssl
-			},
-			function onLoad () {
-
-				var $header = $this.find('.rssHeader a');
-
-				$header.text(title)
-				       .attr('title', title)
-				       .attr('href', linkHref);
+                media: false,
+				ssl: ssl,
+                titletag: 'h3'
 			}
 		);
 	});

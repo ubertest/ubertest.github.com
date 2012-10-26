@@ -8,15 +8,15 @@
  */
 jQuery(function ($) {
 
-	var $locales = $("#locales .locale"),
-		currentLocale = $locales.filter(".current").find("a").attr("data-locale"),
+	var $locales = $("#language-footer .locales .locale"),
+		activeLocale = $locales.filter(".active").find("a").attr("data-locale"),
 		cookiemap = $.cookiemap("inviqa_shared");
 
 	if (!cookiemap.get("locale")) {
-		cookiemap.set("locale", currentLocale);
+		cookiemap.set("locale", activeLocale);
 	}
 
-	if (cookiemap.get("locale") !== currentLocale) {
+	if (cookiemap.get("locale") !== activeLocale) {
 
 		$locales.find("a[data-locale=" + cookiemap.get("locale") + "]").each(function () {
 			window.isRedirecting = true;
@@ -25,11 +25,11 @@ jQuery(function ($) {
 
 	}
 
-	$locales.find("a").click(function () {
+	$(".locales .locale a").click(function () {
 
 		var $this = $(this);
 
-		if ($this.attr('data-locale') !== currentLocale) {
+		if ($this.attr('data-locale') !== activeLocale) {
 			cookiemap.set("locale", $this.attr('data-locale'));
 		}
 

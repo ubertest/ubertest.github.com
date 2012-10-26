@@ -1,0 +1,275 @@
+.only-logged-in {
+    display: none;
+}
+
+body.logged-in .only-logged-in {
+    display: block;
+}
+
+body.logged-in .only-logged-out {
+    display: none;
+}
+
+.betfair-header-footer, .betfair-header-footer input {
+    font-family: Tahoma, Arial, Helvetica, san-serif;
+}
+
+.betfair-header-footer {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.betfair-header-footer .container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.betfair-header-footer p {
+    margin: 0 0 10px;
+}
+
+.betfair-header-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.betfair-header-footer a {
+    text-decoration: none;
+}
+
+.betfair-header-footer a:hover {
+    text-decoration: underline;
+}
+
+#primary-header {
+    position: relative;
+    height: 65px;
+    background-color: #273A47;
+    background: linear-gradient(180deg, #55646E 0%, #273A47 55%);
+    border-bottom: 1px solid #FFB80C;
+    color: #95ABB9;
+}
+
+#primary-header a {
+    color: #FFF;
+}
+
+#primary-header .container {
+    position: relative;
+}
+
+#primary-logo {
+    position: absolute;
+    top: 16px;
+}
+
+#primary-logo a {
+    display: block;
+    background: transparent url(../img/logo-betfair-devprog.png) no-repeat center center;
+    width: 381px;
+    height: 25px;
+    text-indent: -5000px;
+}
+
+#primary-search {
+    position: absolute;
+    top: 20px;
+    left: 450px;
+}
+
+#primary-search input {
+    display: block;
+    width: 220px;
+    height: 21px;
+    line-height: 21px;
+    padding: 1px 1px 1px 10px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+#primary-search button {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    background: #fff url(../img/icon-search.png) no-repeat center center;
+    width: 23px;
+    height: 19px;
+    text-indent: -5000px;
+    border: 0;
+    cursor: pointer;
+}
+
+#account-management {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#account-management ul li {
+    float: left;
+}
+
+#account-management .only-logged-in a {
+    font-weight: bold;
+    padding-left: 12px;
+}
+
+#account-management .only-logged-out {
+    font-size: 14px;
+    padding-top: 14px;
+}
+
+#account-management .only-logged-out li {
+    height: 31px;
+    line-height: 31px;
+    margin-left: 10px;
+}
+
+#account-management .call-to-action a {
+    display:block;
+    width: 100px;
+    border: 1px solid #B0F030;
+    border-radius: 2px;
+    background-color: #FFB80C;
+    background: linear-gradient(180deg, #FFDE4C 0%, #FFBF19 95%);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #000;
+    padding: 0 10px;
+    font-family: Tahoma;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#account-management .call-to-action a:hover {
+    background: #FFB80C;
+}
+
+#account-management .call-to-action a i {
+    float: right;
+    font-style: normal;
+}
+
+/* Nav bar styles */
+
+#primary-nav ul.horizontal-nav,
+#secondary-nav ul.horizontal-nav {
+    font-size: 12px;
+}
+
+#primary-nav ul.horizontal-nav li,
+#secondary-nav ul.horizontal-nav li {
+    float: left;
+}
+
+#primary-nav ul.horizontal-nav li a,
+#secondary-nav ul.horizontal-nav li a {
+    display: block;
+}
+
+#primary-nav ul.horizontal-nav li:first-child a,
+#secondary-nav ul.horizontal-nav li:first-child a {
+    border-left: 0;
+}
+
+#primary-nav ul.horizontal-nav li:last-child a,
+#secondary-nav ul.horizontal-nav li:last-child a {
+    border-right: 0;
+}
+
+/* Primary nav styles */
+
+#primary-nav {
+    height: 49px;
+    background-color: #192730;
+    border-bottom: 1px solid #FFFFFF;
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.3);
+}
+
+#primary-nav ul.horizontal-nav {
+    margin-left: -12px;
+    font-weight: bold;
+}
+
+#primary-nav ul.horizontal-nav li a {
+    display: block;
+    margin: 5px 0;
+    padding: 0 12px;
+    line-height: 40px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid #000;
+    transition: all 0.2s ease-out 0s;
+    color: #95ABB9;
+}
+
+#primary-nav ul.horizontal-nav li a:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#primary-nav ul.horizontal-nav li.current {
+    background: transparent url(../img/icon-nav-marker.png) no-repeat center bottom;
+}
+
+#primary-nav ul.horizontal-nav li.current a,
+#primary-nav ul.horizontal-nav li.section a {
+    color: #FFF;
+}
+
+/* Secondary nav styles */
+
+#secondary-nav {
+    height: 32px;
+    background-color: #EBEFEF;
+}
+
+#secondary-nav ul.horizontal-nav {
+    margin-left: -10px;
+}
+
+#secondary-nav ul.horizontal-nav a {
+    margin: 5px 0;
+    padding: 0 10px;
+    line-height: 22px;
+    border-right: 1px solid #D8DEE2;
+    color: #2789CE;
+}
+
+#secondary-nav ul.horizontal-nav a:hover {
+    text-decoration: underline;
+}
+
+#secondary-nav ul.horizontal-nav li.current a,
+#secondary-nav ul.horizontal-nav li.section a {
+    color: #273A47;
+}
+
+#secondary-nav ul.horizontal-nav li.current a {
+    text-decoration: none;
+}
+
+/* Cookie law notice */
+
+#cookie-law-footer {
+    height: 28px;
+    line-height: 28px;
+    background-color: #FFF9D5;
+    border-bottom: 1px solid #DBE9EC;
+}
+
+#cookie-law-footer a {
+    color: #2789CE;
+}
+
+/* Primary footer */
+
+#primary-footer {
+    padding: 12px 0 2px 0;
+}
+
+#primary-footer p {
+    margin: 0 0 10px;
+}
